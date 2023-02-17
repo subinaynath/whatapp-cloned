@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 import EmojiPicker from 'emoji-picker-react';
-// import '../styles/Chats.css'
-// src\styles\Chats.css
-import "../styles/Chats.css"
 import styled from 'styled-components';
 import { SearchContainer, SearchInput } from './LeftBar';
 import { messagesList } from '../demoData';
@@ -145,12 +142,13 @@ const Chats = (props) => {
         <SearchContainer>
 
           {pickeVisable && (
-            <EmojiPicker
+            <div style={{ height: 50, width: "80px", position: "absolute" ,top:"110px" }}>
+            <EmojiPicker className="emoji"
               onEmojiClick={(emoji) => {
                 setText(text + emoji.emoji);
                 togglePicker(false);
               }}
-            />)}
+            /></div>)}
           <EmojiImage src="../image/emoji.svg"
             onClick={() => togglePicker(!pickeVisable)} />
           <SearchInput placeholder='Type a message' onKeyDown={onEnter}

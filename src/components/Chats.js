@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import EmojiPicker from 'emoji-picker-react';
-import '../styles/Chats.css'
+// import '../styles/Chats.css'
+// src\styles\Chats.css
+import "../styles/Chats.css"
 import styled from 'styled-components';
 import { SearchContainer, SearchInput } from './LeftBar';
 import { messagesList } from '../demoData';
